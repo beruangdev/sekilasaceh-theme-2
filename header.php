@@ -36,6 +36,4 @@
                 <?php get_template_part('template-parts/front-page/featured-slider'); ?>
             <?php } ?>
 
-            <?php do_action('tailpress_content_start'); ?>
-
             <main>
