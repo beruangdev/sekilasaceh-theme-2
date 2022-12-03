@@ -28,7 +28,7 @@
                 <!-- Mobile menu END -->
 
                 <!-- LOGO -->
-                <div class="flex order-2 xl:order-2 justify-center !m-0 col-span-3 xl:col-span-1 h-30 object-contain">
+                <div class="flex order-2 xl:order-2 justify-center !m-0 col-span-3 xl:col-span-1 ">
                     <?php if (has_custom_logo()) { ?>
                         <?php
                         $custom_logo_id = get_theme_mod('custom_logo');
@@ -36,7 +36,7 @@
                         ?>
 
                         <a href="<?php echo get_bloginfo('url'); ?>">
-                            <img src="<?= $logo[0] ?>" alt="" srcset="" class="h-[35px] md:h-[40px] w-auto">
+                            <img src="<?= $logo[0] ?>" alt="" srcset="" class="h-[30px] object-contain w-auto">
                         </a>
 
                     <?php } else { ?>
