@@ -61,6 +61,7 @@ export default defineConfig({
   },
 
   server: {
+    host: true,
 
     // required to load scripts from custom host
     cors: true,

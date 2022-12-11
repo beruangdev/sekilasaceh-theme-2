@@ -1,0 +1,28 @@
+<?php
+$args  = array(
+    'posts_per_page' => 10,
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'tax_query' => [
+        [
+            'taxonomy' => 'category',
+            'field'    => 'slug',
+            'terms'    => ['featured', "opini", "infografis"],
+            'operator' => 'NOT IN',
+        ],
+    ],
+);
+$query_posts = new WP_Query($args);
+?>
+<?php if ($query_posts->have_posts()) : ?>
+    <ul role="list" class="my-6 divide-y divide-gray-200">
+        <?php while ($query_posts->have_posts()) : ?>
+            <?php $query_posts->the_post(); ?>
+            <?php get_template_part('template-parts/components/card_horizontal', get_post_format()); ?>
+        <?php endwhile; ?>
+    </ul>
+    <?php get_template_part('template-parts/pagination'); ?>
+<?php else : ?>
+    <?php get_template_part("template-parts/content/content-empty") ?>
+<?php endif; ?>
+<?php wp_reset_postdata() ?>
