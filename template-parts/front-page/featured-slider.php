@@ -16,7 +16,7 @@ $query_featured = new WP_Query($args);
 
 <div class="flex flex-wrap container">
     <!-- Slider main container -->
-    <div class="swiper basis-8/12">
+    <div class="swiper basis-full md:basis-8/12">
         <?php if ($query_featured->have_posts()) : ?>
 
             <!-- Additional required wrapper -->
@@ -74,7 +74,7 @@ $query_featured = new WP_Query($args);
     );
     $query_infografis = new WP_Query($args);
     ?>
-    <div class="basis-4/12 pl-8">
+    <div class="basis-full md:basis-4/12 md:pl-8 hidden md:block">
         <?php if ($query_infografis->have_posts()) : ?>
             <?php while ($query_infografis->have_posts()) : $query_infografis->the_post() ?>
                 <div class="relative h-full">
