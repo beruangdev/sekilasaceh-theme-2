@@ -98,8 +98,8 @@
         <div class="fixed inset-x-0 top-0 origin-top-right transform p-2 transition hidden xl:hidden wrapper-menu z-10">
             <div class="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
                 <div class="px-5 pt-5 pb-6">
-                    <div class="flex items-center justify-between">
-                        <div>
+                    <div class="flex items-center">
+                        <div class="hidden">
                             <?php if (has_custom_logo()) { ?>
                                 <?php
                                 $custom_logo_id = get_theme_mod('custom_logo');
@@ -117,7 +117,7 @@
                                 </p> -->
                             <?php } ?>
                         </div>
-                        <div class="-mr-2">
+                        <div class="ml-auto">
                             <button type="button" class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 button-menu">
                                 <span class="sr-only">Close menu</span>
                                 <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
