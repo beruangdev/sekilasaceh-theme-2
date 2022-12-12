@@ -22,7 +22,9 @@ $query_featured = new WP_Query($args);
                 <ul class="splide__list">
                     <?php while ($query_featured->have_posts()) : $query_featured->the_post() ?>
                         <li class="splide__slide">
-                            <?= the_post_thumbnail("medium_large", ["class" => "aspect-video object-cover object-center", "style" => "max-width:100%;"]) ?>
+                            <a href="<?= the_permalink() ?>">
+                                <?= the_post_thumbnail("medium_large", ["class" => "aspect-video object-cover object-center", "style" => "max-width:100%;"]) ?>
+                            </a>
 
                             <div class="absolute bottom-0 left-0 w-full text-white text-2xl font-bold p-4 cursor-pointer" onclick="location.href='<?= the_permalink() ?>'">
                                 <a href="<?= esc_url(get_category_link(get_the_category()[0]->cat_ID)) ?>" class="bg-red-500 text-white text-xs px-2 py-1 mb-1 skew-div relative z-0 ml-4">
