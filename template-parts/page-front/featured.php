@@ -20,8 +20,10 @@
         <?php if ($query_infografis->have_posts()) : ?>
             <?php while ($query_infografis->have_posts()) : $query_infografis->the_post() ?>
                 <div class="relative h-full">
-                    <?= the_post_thumbnail("medium_large", ["class" => "w-full object-cover object-center", "style" => "width: 100%;height: 100%;max-width: 640px;object-fit: cover;object-position: center;"]) ?>
-
+                    <a href="<?= the_permalink() ?>">
+                        <?= the_post_thumbnail("medium_large", ["class" => "w-full object-cover object-center", "style" => "width: 100%;height: 100%;max-width: 640px;object-fit: cover;object-position: center;"]) ?>
+                    </a>
+                    
                     <div class="absolute left-0 bottom-0 w-full px-3 pb-2 pt-8" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.5) 100%);">
                         <?php foreach (get_the_category() as $key => $category) : ?>
                             <a href="<?= esc_url(get_category_link($category->cat_ID)) ?>" class="bg-red-500 text-white text-xs px-2 py-1 mb-1 skew-div relative z-0 ml-4">
