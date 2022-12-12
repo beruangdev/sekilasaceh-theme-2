@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
         releaseWheel: true,
         isNavigation: true,
         slideFocus: true,
-        cover: true,
+        // cover: true,
         arrows: false,
         pagination: false,
     }
