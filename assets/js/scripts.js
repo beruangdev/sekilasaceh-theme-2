@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
             heightRatio: 0.6,
             pagination: false,
             arrows: false,
-            cover: true,
+            // cover: true,
         });
 
         let thumbnails = new Splide(el_thumbnail, {
