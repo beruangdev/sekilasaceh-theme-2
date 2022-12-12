@@ -1,7 +1,7 @@
 <li class="flex py-3" id="post-<?php the_ID(); ?>" <?php post_class('mb-12'); ?>>
     <div class="h-20 md:h-20 aspect-[1/1] flex-shrink-0 overflow-hidden rounded-[100%] border border-gray-200">
         <a href="<?= esc_url(get_permalink()) ?>">
-            <?= the_post_thumbnail("post-thumbnail", ["class" => "object-center object-cover", "style" => "width: 100%;height: 100%;"]) ?>
+            <?= the_post_thumbnail("thumbnail", ["class" => "object-center object-cover", "style" => "width: 100%;height: 100%;"]) ?>
         </a>
     </div>
 

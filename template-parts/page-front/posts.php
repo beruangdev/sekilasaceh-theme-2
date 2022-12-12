@@ -15,6 +15,16 @@ $args  = array(
 $query_posts = new WP_Query($args);
 ?>
 <?php if ($query_posts->have_posts()) : ?>
+    <div class="flex flex-wrap justify-between">
+        <div class="flex flex-wrap flex-col">
+            <h3 class="text-lg font-bold">
+                BERITA TERBARU
+            </h3>
+            <h3 class="text-lg font-bold leading-[0.2rem] text-red-500">
+                _______
+            </h3>
+        </div>
+    </div>
     <ul role="list" class="my-6 divide-y divide-gray-200">
         <?php while ($query_posts->have_posts()) : ?>
             <?php $query_posts->the_post(); ?>
