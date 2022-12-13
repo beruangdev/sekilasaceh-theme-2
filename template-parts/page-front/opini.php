@@ -12,6 +12,7 @@ $args  = array(
     ],
 );
 $query_opini = new WP_Query($args);
+wp_reset_postdata();
 ?>
 <?php if ($query_opini->have_posts()) : ?>
     <div class="pl-4 border-0 border-l border-solid border-gray-200">
@@ -30,4 +31,3 @@ $query_opini = new WP_Query($args);
 <?php else : ?>
     <?php get_template_part("template-parts/content/content-empty") ?>
 <?php endif; ?>
-<?php wp_reset_postdata() ?>

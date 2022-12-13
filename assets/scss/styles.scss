@@ -9,6 +9,8 @@ body {
 }
 
 @import "typography.scss";
+@import "pagination.scss";
+@import "splide.scss";
 
 .entry-content p {
 	@apply mb-2;
@@ -47,40 +49,4 @@ body {
 	-ms-transform: skew(-30deg, 0deg);
 	-webkit-transform: skew(-30deg, 0deg);
 	transform: skew(-30deg, 0deg);
-}
-.pagination {
-	.nav-links {
-		@apply flex flex-wrap gap-2;
-
-		.page-numbers {
-			@apply aspect-square w-10 flex m-0 p-0 justify-center items-center text-sm;
-		}
-		.page-numbers:not(.dots) {
-			@apply border border-gray-500;
-		}
-		.page-numbers.current {
-			@apply bg-red-500 border-red-500 text-white;
-		}
-		a.page-numbers:hover {
-			@apply opacity-70 duration-200;
-		}
-	}
-}
-
-// splide
-.splide__track--nav > .splide__list > .splide__slide.is-active {
-	@apply border-0;
-}
-
-.splide__track--nav>.splide__list>.splide__slide {
-    @apply border-0;
-}
-
-.my-slider-progress {
-	@apply bg-gray-300 mt-3;
-}
-
-.my-slider-progress-bar {
-	@apply bg-gray-400 h-1 w-0;
-	transition: width 400ms ease;
 }

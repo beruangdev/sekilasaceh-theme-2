@@ -1,5 +1,22 @@
+<?php
+$args  = array(
+    'posts_per_page' => 5,
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'tax_query' => [
+        [
+            'taxonomy' => 'category',
+            'field'    => 'slug',
+            'terms'    => 'featured'
+        ],
+    ],
+);
+$query_featured = new WP_Query($args);
+wp_reset_postdata();
+?>
 <div class="flex flex-wrap container">
-    <?php get_template_part("template-parts/page-front/featured-splide") ?>
+    
+    <?php get_template_part("template-parts/page-front/featured-splide", null, compact("query_featured")) ?>
 
     <?php
     $args  = array(

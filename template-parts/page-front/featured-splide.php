@@ -1,17 +1,5 @@
 <?php
-$args  = array(
-    'posts_per_page' => 5,
-    'post_type' => 'post',
-    'post_status' => 'publish',
-    'tax_query' => [
-        [
-            'taxonomy' => 'category',
-            'field'    => 'slug',
-            'terms'    => 'featured'
-        ],
-    ],
-);
-$query_featured = new WP_Query($args);
+$query_featured = $args["query_featured"];
 ?>
 
 <?php if ($query_featured->have_posts()) : ?>

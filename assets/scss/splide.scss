@@ -1,0 +1,16 @@
+.splide__track--nav > .splide__list > .splide__slide.is-active {
+	@apply border-0;
+}
+
+.splide__track--nav>.splide__list>.splide__slide {
+    @apply border-0;
+}
+
+.my-slider-progress {
+	@apply bg-gray-300 mt-3;
+}
+
+.my-slider-progress-bar {
+	@apply bg-gray-400 h-1 w-0;
+	transition: width 400ms ease;
+}

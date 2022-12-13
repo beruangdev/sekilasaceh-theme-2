@@ -1,0 +1,21 @@
+.pagination {
+	.nav-links {
+		@apply flex flex-wrap gap-2;
+
+		.page-numbers {
+			@apply aspect-square w-7 flex m-0 p-0 justify-center items-center text-sm rounded-md;
+		}
+		// .page-numbers:not(.dots) {
+		// 	@apply border border-gray-500;
+		// }
+		.page-numbers.current {
+			@apply bg-red-500 text-white;
+		}
+		a.page-numbers:hover {
+			@apply bg-gray-500/20;
+		}
+		.page-numbers:hover {
+			@apply duration-300;
+		}
+	}
+}

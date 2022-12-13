@@ -13,6 +13,7 @@ $args  = array(
     ],
 );
 $query_posts = new WP_Query($args);
+wp_reset_postdata();
 ?>
 <?php if ($query_posts->have_posts()) : ?>
     <div class="flex flex-wrap justify-between">
@@ -35,4 +36,3 @@ $query_posts = new WP_Query($args);
 <?php else : ?>
     <?php get_template_part("template-parts/content/content-empty") ?>
 <?php endif; ?>
-<?php wp_reset_postdata() ?>
