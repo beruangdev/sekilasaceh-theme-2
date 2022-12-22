@@ -14,11 +14,11 @@ $query_featured = $args["query_featured"];
                                 <?= the_post_thumbnail("medium_large", ["class" => "aspect-video object-cover object-center", "style" => "max-width:100%;"]) ?>
                             </a>
 
-                            <div class="absolute bottom-0 left-0 w-full text-white text-2xl font-bold p-4 cursor-pointer" onclick="location.href='<?= the_permalink() ?>'">
-                                <a href="<?= esc_url(get_category_link(get_the_category()[0]->cat_ID)) ?>" class="bg-red-500 text-white text-xs px-2 py-1 mb-1 skew-div relative z-0 ml-4">
+                            <div class="absolute bottom-0 left-0 w-full text-white text-2xl font-bold p-4 pt-6 cursor-pointer" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.5) 100%);" onclick="location.href='<?= the_permalink() ?>'">
+                                <a href="<?= esc_url(get_category_link(get_the_category()[0]->cat_ID)) ?>" class="bg-red-500 hover:bg-red-700 text-white hover:text-white hover:no-underline  text-xs px-2 py-1 mb-1 skew-div relative z-0 ml-4">
                                     <?= get_the_category()[0]->name ?>
                                 </a>
-                                <h3><a href="<?= the_permalink() ?>" class="text-lg font-semibold"><?= the_title() ?></a></h3>
+                                <h3><a href="<?= the_permalink() ?>" class="text-lg font-semibold text-white hover:text-gray-200 hover:no-underline"><?= the_title() ?></a></h3>
                             </div>
                         </li>
                     <?php endwhile ?>
