@@ -136,6 +136,8 @@ document.addEventListener("DOMContentLoaded", function () {
             heightRatio: 0.6,
             pagination: false,
             arrows: false,
+            autoplay: true,
+            interval: 1000,
             // cover: true,
         });
 

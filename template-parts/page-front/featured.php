@@ -33,6 +33,7 @@ wp_reset_postdata();
     );
     $query_infografis = new WP_Query($args);
     ?>
+
     <div class="basis-full md:basis-4/12 md:pl-8 hidden md:block">
         <?php if ($query_infografis->have_posts()) : ?>
             <?php while ($query_infografis->have_posts()) : $query_infografis->the_post() ?>
@@ -43,11 +44,11 @@ wp_reset_postdata();
                     
                     <div class="absolute left-0 bottom-0 w-full px-3 pb-2 pt-8" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.5) 100%);">
                         <?php foreach (get_the_category() as $key => $category) : ?>
-                            <a href="<?= esc_url(get_category_link($category->cat_ID)) ?>" class="bg-red-500 text-white text-xs px-2 py-1 mb-1 skew-div relative z-0 ml-4">
+                            <a href="<?= esc_url(get_category_link($category->cat_ID)) ?>" class="bg-red-500 hover:bg-red-700 text-white hover:text-white hover:no-underline text-xs px-2 py-1 mb-1 skew-div relative z-0 ml-4">
                                 <?= $category->name ?>
                             </a>
                         <?php endforeach ?>
-                        <h3><a href="<?= the_permalink() ?>" class="text-lg font-semibold text-white"><?= the_title() ?></a></h3>
+                        <h3><a href="<?= the_permalink() ?>" class="text-lg font-semibold text-white hover:text-gray-200 hover:no-underline"><?= the_title() ?></a></h3>
                     </div>
 
                 </div>
