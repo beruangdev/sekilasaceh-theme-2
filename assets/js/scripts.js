@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
             arrows: false,
             autoplay: true,
             resetProgress: false,
-            interval: 1000,
+            interval: 2000,
             // cover: true,
         });
         main.on('moved', function (newIndex, prefIndex, destIndex) {
