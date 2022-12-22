@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+
     <title>
-        <?php if (is_front_page() && is_home()) {
-            echo get_bloginfo("name");
-        } else {
-            echo wp_title("");
-        } ?>
+        <?php if ($_SERVER['REQUEST_URI'] == "/") : ?>
+            <?= get_bloginfo("name") ?>
+        <?php else : ?>
+            <?= get_bloginfo("name") ?> - <?= wp_title(' ') ?>
+        <?php endif ?>
     </title>
 
     <!-- Swiper Slider -->
@@ -36,9 +37,10 @@
 <body <?php body_class('bg-white antialiased body-font font-poppins min-h-screen'); ?>>
     <?php wp_body_open(); ?>
 
+
     <div id="page" class="min-h-screen flex flex-col">
 
         <?php get_template_part('template-parts/header/navbar'); ?>
 
-    <div id="content" class="site-content">
+        <div id="content" class="site-content">
             <main>

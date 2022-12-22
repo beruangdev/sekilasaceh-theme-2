@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) )
 
 add_action('after_setup_theme', function(){
     add_theme_support('post-thumbnails');
+    add_theme_support( 'title-tag' );
 });
 
 // Main switch to get fontend assets from a Vite dev server OR from production built folder
