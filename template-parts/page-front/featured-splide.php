@@ -18,7 +18,7 @@ $query_featured = $args["query_featured"];
                                 <a href="<?= esc_url(get_category_link(get_the_category()[0]->cat_ID)) ?>" class="bg-red-500 hover:bg-red-700 text-white hover:text-white hover:no-underline  text-xs px-2 py-1 mb-1 skew-div relative z-0 ml-4">
                                     <?= get_the_category()[0]->name ?>
                                 </a>
-                                <h3><a href="<?= the_permalink() ?>" class="text-lg font-semibold text-white hover:text-gray-200 hover:no-underline"><?= the_title() ?></a></h3>
+                                <h3 class="max-w-[88%] md:max-w-[90%] xl:max-w-[95%]"><a href="<?= the_permalink() ?>" class="text-lg font-semibold text-white hover:text-gray-200 hover:no-underline"><?= the_title() ?></a></h3>
                             </div>
                         </li>
                     <?php endwhile ?>
