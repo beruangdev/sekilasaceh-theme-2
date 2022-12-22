@@ -3,6 +3,10 @@ a {
 	@apply text-base;
 }
 
+a {
+    @apply text-blue-600 dark:text-blue-500 hover:underline cursor-pointer;
+}
+
 .entry-content p {
 	@apply mb-2;
 }
@@ -16,5 +20,5 @@ ul {
 }
 
 ol, ul {
-    @apply pl-4;
+    @apply pl-4 mb-2;
 }
