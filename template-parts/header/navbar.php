@@ -1,4 +1,4 @@
-<header class="mb-0 xl:mb-3">
+<header class="mb-0 xl:mb-3 container-navbar">
     <div class="relative bg-white">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
 

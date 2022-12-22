@@ -38,7 +38,7 @@
 
     <div id="page" class="min-h-screen flex flex-col">
 
-        <?php get_template_part('template-parts/navbar'); ?>
+        <?php get_template_part('template-parts/header/navbar'); ?>
 
     <div id="content" class="site-content">
             <main>

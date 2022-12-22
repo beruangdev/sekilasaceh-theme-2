@@ -1,0 +1,9 @@
+.container-navbar {
+	a {
+		@apply text-gray-900 hover:text-gray-800 duration-300;
+	}
+	ul,
+	ol {
+		@apply list-none;
+	}
+}

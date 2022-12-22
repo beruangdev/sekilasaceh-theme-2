@@ -8,9 +8,10 @@ body {
 	font-family: Roboto, sans-serif;
 }
 
-@import "typography.scss";
-@import "pagination.scss";
-@import "splide.scss";
+@import "components/typography.scss";
+@import "components/navbar.scss";
+@import "components/pagination.scss";
+@import "vendor/splide.scss";
 
 .container {
 	@apply w-full mx-auto px-4 relative overflow-hidden md:w-[1100px];
