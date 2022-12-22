@@ -137,8 +137,16 @@ document.addEventListener("DOMContentLoaded", function () {
             pagination: false,
             arrows: false,
             autoplay: true,
+            resetProgress: false,
             interval: 1000,
             // cover: true,
+        });
+        main.on('moved', function (newIndex, prefIndex, destIndex) {
+            var Autoplay = main.Components.Autoplay;
+            if (newIndex == main.length - 1) {
+                Autoplay.pause()
+                main.options = { autoplay: false }
+            }
         });
 
         let thumbnails = new Splide(el_thumbnail, {
