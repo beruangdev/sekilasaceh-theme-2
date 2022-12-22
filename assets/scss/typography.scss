@@ -2,3 +2,19 @@ p,
 a {
 	@apply text-base;
 }
+
+.entry-content p {
+	@apply mb-2;
+}
+
+ol {
+	@apply list-decimal;
+}
+
+ul {
+	@apply list-disc;
+}
+
+ol, ul {
+    @apply pl-4;
+}

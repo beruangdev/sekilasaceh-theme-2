@@ -12,10 +12,6 @@ body {
 @import "pagination.scss";
 @import "splide.scss";
 
-.entry-content p {
-	@apply mb-2;
-}
-
 .container {
 	@apply w-full mx-auto px-4 relative overflow-hidden md:w-[1100px];
 }
