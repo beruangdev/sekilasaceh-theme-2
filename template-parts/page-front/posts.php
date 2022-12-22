@@ -7,7 +7,7 @@ $args  = array(
         [
             'taxonomy' => 'category',
             'field'    => 'slug',
-            'terms'    => ['featured', "opini", "infografis"],
+            // 'terms'    => ['featured', "opini", "infografis"],
             'operator' => 'NOT IN',
         ],
     ],
