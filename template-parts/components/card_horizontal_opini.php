@@ -9,7 +9,6 @@
         <!-- <div class="flex flex-wrap">
             <?php foreach (get_the_category() as $category) : ?>
                 <a href="<?= get_category_link($category) ?>" class="bg-red-500 rounded-sm text-white text-xs px-2 py-1 flex flex-wrap mb-1 w-fit skew-div relative z-0 ml-4"><?= $category->name ?></a>
-                <?php break ?>
             <?php endforeach ?>
         </div> -->
         <div class="flex justify-between mb-auto">
