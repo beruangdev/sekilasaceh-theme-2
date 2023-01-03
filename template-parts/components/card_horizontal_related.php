@@ -19,6 +19,7 @@
 
             <?php foreach (get_the_category() as $category) : ?>
                 <a href="<?= get_category_link($category) ?>" class="text-red-500 font-medium text-xs"><?= $category->name ?></a>
+                <?php break ?>
             <?php endforeach ?>
         </div>
     </div>

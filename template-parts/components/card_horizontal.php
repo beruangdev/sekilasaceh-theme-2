@@ -1,5 +1,5 @@
 <li class="flex py-3 container-card-horizontal" id="post-<?php the_ID(); ?>" <?php post_class('mb-12'); ?>>
-    <div class=" h-20 md:h-20 aspect-[1/1] flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+    <div class="h-20 md:h-20 aspect-[1/1] flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
         <a href="<?= esc_url(get_permalink()) ?>">
             <?= the_post_thumbnail("thumbnail", ["class" => "w-full object-cover object-center", "style" => "width: 100%;height: 100%;max-width: 640px;object-fit: cover;object-position: center;"]) ?>
         </a>
@@ -19,6 +19,7 @@
 
             <?php foreach (get_the_category() as $category) : ?>
                 <a href="<?= get_category_link($category) ?>" class="text-red-500 font-medium text-xs"><?= $category->name ?></a>
+                <?php break ?>
             <?php endforeach ?>
         </div>
     </div>
