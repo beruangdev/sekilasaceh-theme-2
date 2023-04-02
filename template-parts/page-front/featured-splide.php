@@ -49,7 +49,7 @@ $query_featured = $args["query_featured"];
                 <ul class="splide__list">
                     <?php while ($query_featured->have_posts()) : $query_featured->the_post() ?>
                         <li class="splide__slide">
-                            <?= the_post_thumbnail("thumbnail", ["class" => "aspect-[16/10] object-cover object-center", "style" => "max-width:100%; height: 100%"]) ?>
+                            <?= the_post_thumbnail("thumbnail", ["class" => "aspect-[16/10] object-cover object-center", "style" => "max-width:100%; height: 100%; object-fit: cover; object-position: center;"]) ?>
                         </li>
                     <?php endwhile ?>
                 </ul>
