@@ -4,14 +4,13 @@ $query_featured = $args["query_featured"];
 
 <?php if ($query_featured->have_posts()) : ?>
     <div class="splide_thumbnails_wrapper basis-full md:basis-8/12">
-
         <section class="splide main mb-2">
             <div class="splide__track">
                 <ul class="splide__list">
                     <?php while ($query_featured->have_posts()) : $query_featured->the_post() ?>
                         <li class="splide__slide">
                             <a href="<?= the_permalink() ?>">
-                                <?= the_post_thumbnail("medium_large", ["class" => "aspect-video object-cover object-center", "style" => "max-width:100%; height: 100%"]) ?>
+                                <?= the_post_thumbnail("medium_large", ["class" => "aspect-video object-cover object-center h-full", "style" => "max-width:100%; height: 100%; object-fit: cover; object-position: center;"]) ?>
                             </a>
 
                             <div class="absolute bottom-0 left-0 w-full text-white text-2xl font-bold p-4 pt-6 cursor-pointer" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.5) 100%);" onclick="location.href='<?= the_permalink() ?>'">
