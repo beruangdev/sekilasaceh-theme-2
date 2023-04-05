@@ -4,10 +4,16 @@ $args  = array(
     'post_type' => 'post',
     'post_status' => 'publish',
     'tax_query' => [
+        "relation" => "OR",
         [
             'taxonomy' => 'category',
             'field'    => 'slug',
-            'terms'    => 'featured'
+            'terms'    => 'featured',
+        ],
+        [
+            'taxonomy' => 'place',
+            'field'    => 'slug',
+            'terms'    => 'featured',
         ],
     ],
 );

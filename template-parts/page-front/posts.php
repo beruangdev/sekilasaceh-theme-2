@@ -11,7 +11,7 @@ $args  = array(
             // 'terms'    => ['featured', "opini", "infografis"],
             'operator' => 'NOT IN',
         ],
-    ],
+    ]
 );
 $query_posts = new WP_Query($args);
 wp_reset_postdata();
