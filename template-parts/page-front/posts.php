@@ -3,6 +3,7 @@ $args  = array(
     'posts_per_page' => 10,
     'post_type' => 'post',
     'post_status' => 'publish',
+    'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
     'tax_query' => [
         [
             'taxonomy' => 'category',
